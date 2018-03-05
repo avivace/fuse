@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
-@app.route('/', methods=['POST'])
+@app.route('/upload', methods=['POST'])
 def upload_file():
 	if request.method == 'POST':
 		if 'file' not in request.files:

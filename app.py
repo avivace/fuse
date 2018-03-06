@@ -12,13 +12,14 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 def upload_file():
 	if request.method == 'POST':
 		if 'file' not in request.files:
-			return 400, 'Bad request'
+			return 'Bad request'
+		file = request.files['file']
 		if file.filename == '':
-			return 400, 'Bad request'
+			return 'Bad request'
 		if file:
 			filename = secure_filename(file.filename)
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-			return 200, 'Success'
+			return 'Success'
 
 if __name__ == "__main__":
 	app.run(debug=True)

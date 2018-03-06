@@ -1,6 +1,8 @@
 <template lang="pug">
+
 <div>
-<form action="/upload" method=post enctype=multipart/form-data>
+  h1 File Upload
+<form action="http://localhost:5000/upload" method=post enctype=multipart/form-data>
 <p><input type=file name=file>
 <input type=submit value=Upload></p></form> 
 </div>

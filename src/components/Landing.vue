@@ -2,10 +2,11 @@
 
 <div>
   h1 File Upload
-<form action="http://localhost:5000/upload" method=post enctype=multipart/form-data>
-<p><input type=file name=file>
-<input type=submit value=Upload></p></form> 
+  h1 {{msg}}
+<input id="input" ref="fileInput" type="file">
+<button @click="upload"> Upload </button>
 </div>
+
 </template>
 
 <script>
@@ -14,6 +15,20 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    upload(e) {
+      if (this.$refs.fileInput.files[0]){
+        var formdata = new FormData();
+        formdata.append('file', this.$refs.fileInput.files[0])
+        const config = {
+          headers : {'Content-Type':'multipart/form-data'}
+        }
+        this.$axios.post("http://localhost:5000/upload", formdata, config).then(result => {
+          console.dir(result.data);
+        })
+      }
     }
   }
 }

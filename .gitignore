@@ -2,3 +2,5 @@ build/
 node_modules/
 dist/
 uploads/
+db.sqlite
+db.sqlite-journal

@@ -2,7 +2,22 @@
 
 > Simple file uploading service using Flask and Vue
 
-## Build Setup
+Deploy:
+```bash
+# Start Flask backend server
+`./app.py`
+
+# Serve frontend Vue application
+`npm run dev` 
+```
+
+## Backend
+
+Flask, sqlite3
+
+## Frontend
+
+### Build Setup
 
 ``` bash
 # install dependencies
@@ -27,4 +42,8 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+### Documentation Resources
+
+- [VueJS webpack template guide](http://vuejs-templates.github.io/webpack/)
+- [docs for vue-loader](http://vuejs.github.io/vue-loader)

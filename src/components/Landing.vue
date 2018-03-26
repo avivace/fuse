@@ -3,10 +3,12 @@
 <div>
   h1 File Upload
   h1 {{msg}}
-<input id="input" ref="fileInput" type="file">
-<button @click="upload"> Upload </button>
-</div>
 
+
+<b-form-file v-model="file" :state="Boolean(file)" placeholder="Choose a file..."></b-form-file>
+<b-button @click="upload">Upload</b-button>
+<b-progress :value="counter" :max="max" show-progress animated></b-progress>
+</div>
 </template>
 
 <script>
@@ -14,16 +16,26 @@ export default {
   name: 'Landing',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      file: null,
+      msg: 'Welcome to Your Vue.js App',
+      counter: 0,
+      max: 100
     }
   },
   methods: {
+    updateProgressBar(progress) {
+      console.log(percentCompleted)
+    },
     upload(e) {
-      if (this.$refs.fileInput.files[0]){
+      console.log(this.file)
+      if (this.file){
         var formdata = new FormData();
-        formdata.append('file', this.$refs.fileInput.files[0])
+        formdata.append('file', this.file)
         const config = {
-          headers : {'Content-Type':'multipart/form-data'}
+          headers: {'Content-Type':'multipart/form-data'},
+          onUploadProgress: progressEvent => {
+            this.counter = Math.floor((progressEvent.loaded * 100) / progressEvent.total);
+          }
         }
         this.$axios.post("http://localhost:5000/upload", formdata, config).then(result => {
           console.dir(result.data);

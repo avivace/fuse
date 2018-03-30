@@ -20,4 +20,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.progress-bar {
+  font-size: 1.5rem;
+}
 </style>

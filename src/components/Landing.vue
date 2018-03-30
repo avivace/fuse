@@ -4,10 +4,18 @@
   h1 File Upload
   h1 {{msg}}
 
-
-<b-form-file v-model="file" :state="Boolean(file)" placeholder="Choose a file..."></b-form-file>
-<b-button @click="upload">Upload</b-button>
-<b-progress :value="counter" :max="max" show-progress animated></b-progress>
+<b-container class="bv-example-row">
+    <b-row>
+        <b-col  lg=8><b-form-file v-model="file" :state="Boolean(file)" placeholder="Choose a file..."></b-form-file></b-col>
+        <b-col  md="auto"><b-button variant="warning" @click="upload">Upload</b-button></b-col>
+    </b-row>
+    <br>
+    <b-row>
+    <b-col>
+    <b-progress height="2rem" :value="counter" :max="max" show-progress animated></b-progress>
+    </b-col>
+    </b-row>
+</b-container>
 </div>
 </template>
 
@@ -48,6 +56,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 h1, h2 {
   font-weight: normal;
 }

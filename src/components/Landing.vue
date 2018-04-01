@@ -1,10 +1,12 @@
 <template lang="pug">
 
 <div>
-  h1 File Upload
-  h1 {{msg}}
-
 <b-container class="bv-example-row">
+    <b-row>
+    <h1 style="font-weight: 500"> fuws </h1> &nbsp;&nbsp; <h2 style="font-weight: 300"> a file upload web service</h2>
+
+    </b-row>
+    <div style="border: 1px solid gray; padding: 25px; border-radius: 5px;margin: 100px">
     <b-row>
         <b-col  lg=8><b-form-file v-model="file" :state="Boolean(file)" placeholder="Choose a file..."></b-form-file></b-col>
         <b-col  md="auto"><b-button variant="warning" @click="upload">Upload</b-button></b-col>
@@ -15,17 +17,18 @@
     <b-progress height="2rem" :value="counter" :max="max" show-progress animated></b-progress>
     </b-col>
     </b-row>
+    </div>
 </b-container>
 </div>
 </template>
 
 <script>
+
 export default {
   name: 'Landing',
   data () {
     return {
       file: null,
-      msg: 'Welcome to Your Vue.js App',
       counter: 0,
       max: 100
     }
@@ -54,10 +57,11 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700');
 
 h1, h2 {
+  font-family: 'Ubuntu';
   font-weight: normal;
 }
 ul {

@@ -18,7 +18,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 
   color: #2c3e50;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .progress-bar {
   font-size: 1.5rem;

@@ -16,6 +16,8 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 
 conn = sqlite3.connect('db.sqlite')
 
+# TODO: serve the production build of the Vue app
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
 	print(request)

@@ -1,4 +1,4 @@
-<template lang="pug">
+<template>
 
 <div>
 <b-container class="bv-example-row">
@@ -7,7 +7,10 @@
 
     </b-row>
     <div style="border: 1px solid gray; padding: 25px; border-radius: 5px;margin: 60px">
-    <b-row>
+    <b-row v-if="uploadCompleted">
+      {{ uploadedFileURL }}
+    </b-row>
+    <b-row v-if="!uploadCompleted">
         <b-col  lg=8><b-form-file v-model="file" :state="Boolean(file)" placeholder="Choose a file..."></b-form-file></b-col>
         <b-col  md="auto"><b-button variant="warning" @click="upload">Upload</b-button></b-col>
     </b-row>
@@ -30,10 +33,14 @@ export default {
   name: 'Landing',
   data () {
     return {
+      API_ENDPOINT: process.env.API_ENDPOINT,
+      BASE_DOMAIN: process.env.BASE_DOMAIN,
       file: null,
       counter: 0,
       max: 100,
       uploadInProgress: false,
+      uploadedFileURL: '',
+      uploadCompleted: false
     }
   },
   methods: {
@@ -53,6 +60,9 @@ export default {
           }
         }
         this.$axios.post("http://localhost:5000/upload", formdata, config).then(result => {
+          this.uploadedFileURL = result.data;
+          this.uploadCompleted = true;
+          this.uploadInProgress = false;
           console.dir(result.data);
         })
       }

@@ -10,7 +10,6 @@ export default new Router({
       path: '/',
       name: 'Landing',
       component: Landing,
-      meta: {title: 'A'}
     }
   ]
 })

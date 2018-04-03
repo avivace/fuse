@@ -13,10 +13,10 @@ npm install
 pip3 install -r requirements.txt
 
 # Build the Vue application for production
-`npm run build` 
+npm run build
 
 # Start Flask backend server
-`python3 app.py`
+python3 app.py
 
 # Application is online at localhost:5000
 ```

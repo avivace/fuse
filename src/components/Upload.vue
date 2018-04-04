@@ -21,16 +21,16 @@
     </b-col>
     </b-row>
     </div>
-
     <b-row class="footer"><b-col>&copy;2018 Antonio Vivace. See the <a href="https://github.com/avivace/fuse">source </a>on GitHub.</b-col></b-row>
 </b-container>
 </div>
+
 </template>
 
 <script>
 
 export default {
-  name: 'Landing',
+  name: 'Upload',
   data () {
     return {
       API_ENDPOINT: process.env.API_ENDPOINT,

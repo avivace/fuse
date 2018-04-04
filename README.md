@@ -5,6 +5,8 @@
 
 ### Deploy:
 
+Supposing you have `NodeJS`, `npm`, `Python3` and `pip3` installed:
+
 ```bash
 # Install npm dependencies
 npm install
@@ -56,3 +58,5 @@ npm test
 
 - [VueJS webpack template guide](http://vuejs-templates.github.io/webpack/)
 - [docs for vue-loader](http://vuejs.github.io/vue-loader)
+
+Thanks to [Cristian Baldi](https://github.com/crisbal) for its Vue wisdom.

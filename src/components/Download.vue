@@ -1,8 +1,8 @@
 <template>
 
 <div>
-DOWNLOAD PAGE
-{{ $route.params.id }}
+<h3>Downloading your file...</h3>
+You requested the resource <code>{{ $route.params.id }}</code>
 </div>
 </template>
 
@@ -12,15 +12,18 @@ export default {
   name: 'Download',
   data () {
     return {
-      a : 0
+      a : ''
     }
   },
   methods: {
     download() {
-      setTimeout(function(){
-        window.location = "http://localhost:5000/file/cae911"
-      }, 1000)   
+      setTimeout(() => {
+			window.location = "http://localhost:5000/file/"+this.$route.params.id
+      }, 2000)
     },
+  },
+  mounted() {
+  	this.download()
   }
 }
 </script>

@@ -27,16 +27,26 @@ export default {
 
 	color: #2c3e50;
 	margin-top: 40px;
+	font-family: 'Ubuntu';
 }
 .progress-bar {
 	font-size: 1.5rem;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:300,400,500,700');
+
 
 .footer {
   font-size:0.9rem;
   font-family: 'Ubuntu';
+}
+h1 {
+	font-size: 3.5rem;
+	letter-spacing: -2px;
+}
+h2 {
+	font-size: 2.3rem;
 }
 h1, h2 {
   font-family: 'Ubuntu';

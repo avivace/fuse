@@ -1,4 +1,4 @@
-<h1><img alt="fuse" src="https://i.imgur.com/Y3npKn0.png" height="212"/></h1>
+<h1><img alt="fuse" src="https://i.imgur.com/Y3npKn0.png" height="106"/></h1>
 
 > A simple file uploading web service in Vue.js, Axios and Flask
 

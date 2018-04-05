@@ -16,9 +16,7 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 conn = sqlite3.connect('db.sqlite')
 c = conn.cursor()
 
-
 # Warning: Flask in debug mode runs the init code here two times
-
 try:
 	c.execute('SELECT COUNT(id) FROM files')
 	print(c.fetchone()[0], 'uploads in database')
@@ -34,9 +32,6 @@ except:
 	print('Initialized database')
 conn.commit()
 conn.close()
-
-# TODO: serve the production build of the Vue app during development
-#  (define environments)
 
 @app.route('/upload', methods=['POST'])
 def upload_file():

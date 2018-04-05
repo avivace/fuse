@@ -2,6 +2,7 @@
 
 > A simple file uploading web service in Vue.js, Axios and Flask
 
+![Demo GIF](https://i.imgur.com/izTLhCm.gif)
 
 ### Deploy:
 

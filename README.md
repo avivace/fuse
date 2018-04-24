@@ -3,7 +3,7 @@
 > A simple file uploading service in Vue.js and Flask
 
 
-### Deploy:
+### Deploy
 
 Supposing you have `NodeJS`, `npm`, `Python3` and `pip3` installed:
 

@@ -2,6 +2,8 @@
 
 > A simple file uploading web service in Vue.js, Axios and Flask
 
+**Deprecation notice** this was a simple toy project I threw together to show some API and client-server concepts to the graduating students I was supervising in 2018/2019. This is *now* probably superseded by more recent bundling tools (erm.. webpack) and technologies. Keep that in mind and take a look at more modern /updated webdev practises.
+
 ![Demo GIF](https://i.imgur.com/izTLhCm.gif)
 
 ### Deploy
